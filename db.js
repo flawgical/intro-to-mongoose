@@ -38,10 +38,25 @@ db.on('connected', () => {
 //   console.log(articles) //will return an array;
 // })
 
+//update
+// Article.update(
+//     {author: 'Shahzad'}, //thing it update
+//     { $set: {author: 'Shahzad Khan'}}, //object with property
+//     {multi: true}, //this is the options. Multi true says update all
+//     // things that are Shahzad to Shahzad Khan
+//     (err, updateArticle) => {
+//       if(err) {
+//         console.log(err)
+//       } else {
+//         console.log(updateArticle)//tells your action was succeed
+//       }
+//     }
+// )
 
-Article.update(
-    {author: 'Shahzad'}, //thing it update
-    { $set: {author: 'Shahzad Khan'}}, //object with property
-    {multi: true} //this is the options. Multi true says update all
-    // things that are Shahzad to Shahzad Khan
+//delete
+Article.remove(
+    {title: 'Python'},
+    (err, response) => {
+      console.log(response)
+    }
 )
